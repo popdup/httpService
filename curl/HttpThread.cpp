@@ -125,6 +125,7 @@ void HttpThread::PrepareCommonOPT(CURL * pCurl)
     curl_easy_setopt(pCurl, CURLOPT_FORBID_REUSE, 0); 
 } 
 
+// TODO should support more method like GET/PUT/POST/DELETE/FTP and so on
 void HttpThread::PrepareCurl(CURL* pCurl,EventInfo* eventInfo) 
 {
     if(!pCurl || !eventInfo) 
@@ -168,14 +169,13 @@ void HttpThread::PrepareRequestHttpDownload(CURL* pCurl,EventInfo* eventInfo)
     curl_easy_setopt(pCurl, CURLOPT_WRITEFUNCTION, write_data);
 
     /* open the file */
-    FILE *pagefile = fopen("./1.pdf", "wb");
-
+    FILE *pagefile = fopen("./1.png", "wb");
     if(pagefile) {
         //FilePtr(pagefile,::fclose);
         /* write the page body to this file handle */
         curl_easy_setopt(pCurl, CURLOPT_WRITEDATA, pagefile);
     }
-
+    //TODO should close it after perform
 } 
 
 int HttpThread::PerformTransfer() {

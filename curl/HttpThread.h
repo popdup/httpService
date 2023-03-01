@@ -31,7 +31,6 @@ public:
     void PutEventInQueue(EventInfo *event);
     EventInfo *GetEventFromQueue();
     void GetEventsFromQueue(list<EventInfo *> &events, int nMaxToRetrieve);
-    void PutRspToSession(string &rescontent);
 
     bool Init();
     void AddEasyHandler();
@@ -54,7 +53,7 @@ private:
     mutex m_mutex;
 };
 
-
+// TODO also should inlcude more detail info to extend
 class EventInfo{
 public:
     EventInfo(){}
