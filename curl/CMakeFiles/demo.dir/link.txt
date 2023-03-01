@@ -1,1 +1,0 @@
-/usr/bin/c++    -rdynamic CMakeFiles/demo.dir/demo.cpp.o CMakeFiles/demo.dir/HttpThread.cpp.o  -o demo  -lcurl -lpthread 

@@ -1,3 +1,0 @@
-/home/ubuntu/pengdu/curl/CMakeFiles/rebuild_cache.dir
-/home/ubuntu/pengdu/curl/CMakeFiles/edit_cache.dir
-/home/ubuntu/pengdu/curl/CMakeFiles/demo.dir
